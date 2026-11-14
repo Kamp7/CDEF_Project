@@ -1,0 +1,204 @@
+{
+  "setup": "Same 20 tasks and seed 305; Cloud RAM changed from 64 GB to 96 GB. Other node settings stayed at defaults.",
+  "expected": "The additional RAM should allow more placements and reduce rejections; QoS can change with placement and projected load.",
+  "cloud_memory_capacity_gb": {
+    "baseline": 64,
+    "changed": 96
+  },
+  "runs": [
+    {
+      "policy": "lowest-latency-first",
+      "baseline": {
+        "policy": "lowest-latency-first",
+        "total_tasks": 20,
+        "placed_count": 12,
+        "rejected_count": 8,
+        "qos_met_count": 7,
+        "qos_missed_count": 5,
+        "mean_simulated_latency_ms": 46.579861111111114,
+        "placements_by_node": {
+          "edge-1": 3,
+          "fog-1": 2,
+          "cloud-1": 7
+        },
+        "node_utilization": [
+          {
+            "node_id": "edge-1",
+            "node_type": "Edge",
+            "cpu_used": 7.0,
+            "cpu_capacity": 8,
+            "cpu_utilization_percent": 87.5,
+            "memory_used_gb": 7.0,
+            "memory_capacity_gb": 8,
+            "memory_utilization_percent": 87.5
+          },
+          {
+            "node_id": "fog-1",
+            "node_type": "Fog",
+            "cpu_used": 10.0,
+            "cpu_capacity": 16,
+            "cpu_utilization_percent": 62.5,
+            "memory_used_gb": 21.0,
+            "memory_capacity_gb": 24,
+            "memory_utilization_percent": 87.5
+          },
+          {
+            "node_id": "cloud-1",
+            "node_type": "Cloud",
+            "cpu_used": 37.0,
+            "cpu_capacity": 64,
+            "cpu_utilization_percent": 57.8125,
+            "memory_used_gb": 64.0,
+            "memory_capacity_gb": 64,
+            "memory_utilization_percent": 100.0
+          }
+        ]
+      },
+      "capacity_changed": {
+        "policy": "lowest-latency-first",
+        "total_tasks": 20,
+        "placed_count": 15,
+        "rejected_count": 5,
+        "qos_met_count": 7,
+        "qos_missed_count": 8,
+        "mean_simulated_latency_ms": 49.11111111111111,
+        "placements_by_node": {
+          "edge-1": 3,
+          "fog-1": 2,
+          "cloud-1": 10
+        },
+        "node_utilization": [
+          {
+            "node_id": "edge-1",
+            "node_type": "Edge",
+            "cpu_used": 7.0,
+            "cpu_capacity": 8,
+            "cpu_utilization_percent": 87.5,
+            "memory_used_gb": 7.0,
+            "memory_capacity_gb": 8,
+            "memory_utilization_percent": 87.5
+          },
+          {
+            "node_id": "fog-1",
+            "node_type": "Fog",
+            "cpu_used": 10.0,
+            "cpu_capacity": 16,
+            "cpu_utilization_percent": 62.5,
+            "memory_used_gb": 21.0,
+            "memory_capacity_gb": 24,
+            "memory_utilization_percent": 87.5
+          },
+          {
+            "node_id": "cloud-1",
+            "node_type": "Cloud",
+            "cpu_used": 53.0,
+            "cpu_capacity": 64,
+            "cpu_utilization_percent": 82.8125,
+            "memory_used_gb": 96.0,
+            "memory_capacity_gb": 96,
+            "memory_utilization_percent": 100.0
+          }
+        ]
+      },
+      "placed_delta": 3,
+      "rejected_delta": -3
+    },
+    {
+      "policy": "capacity-aware",
+      "baseline": {
+        "policy": "capacity-aware",
+        "total_tasks": 20,
+        "placed_count": 12,
+        "rejected_count": 8,
+        "qos_met_count": 8,
+        "qos_missed_count": 4,
+        "mean_simulated_latency_ms": 46.588541666666664,
+        "placements_by_node": {
+          "edge-1": 3,
+          "fog-1": 2,
+          "cloud-1": 7
+        },
+        "node_utilization": [
+          {
+            "node_id": "edge-1",
+            "node_type": "Edge",
+            "cpu_used": 7.0,
+            "cpu_capacity": 8,
+            "cpu_utilization_percent": 87.5,
+            "memory_used_gb": 7.0,
+            "memory_capacity_gb": 8,
+            "memory_utilization_percent": 87.5
+          },
+          {
+            "node_id": "fog-1",
+            "node_type": "Fog",
+            "cpu_used": 9.0,
+            "cpu_capacity": 16,
+            "cpu_utilization_percent": 56.25,
+            "memory_used_gb": 21.0,
+            "memory_capacity_gb": 24,
+            "memory_utilization_percent": 87.5
+          },
+          {
+            "node_id": "cloud-1",
+            "node_type": "Cloud",
+            "cpu_used": 38.0,
+            "cpu_capacity": 64,
+            "cpu_utilization_percent": 59.375,
+            "memory_used_gb": 64.0,
+            "memory_capacity_gb": 64,
+            "memory_utilization_percent": 100.0
+          }
+        ]
+      },
+      "capacity_changed": {
+        "policy": "capacity-aware",
+        "total_tasks": 20,
+        "placed_count": 15,
+        "rejected_count": 5,
+        "qos_met_count": 7,
+        "qos_missed_count": 8,
+        "mean_simulated_latency_ms": 49.09722222222222,
+        "placements_by_node": {
+          "edge-1": 2,
+          "fog-1": 3,
+          "cloud-1": 10
+        },
+        "node_utilization": [
+          {
+            "node_id": "edge-1",
+            "node_type": "Edge",
+            "cpu_used": 4.0,
+            "cpu_capacity": 8,
+            "cpu_utilization_percent": 50.0,
+            "memory_used_gb": 4.0,
+            "memory_capacity_gb": 8,
+            "memory_utilization_percent": 50.0
+          },
+          {
+            "node_id": "fog-1",
+            "node_type": "Fog",
+            "cpu_used": 12.0,
+            "cpu_capacity": 16,
+            "cpu_utilization_percent": 75.0,
+            "memory_used_gb": 20.0,
+            "memory_capacity_gb": 24,
+            "memory_utilization_percent": 83.33333333333334
+          },
+          {
+            "node_id": "cloud-1",
+            "node_type": "Cloud",
+            "cpu_used": 52.0,
+            "cpu_capacity": 64,
+            "cpu_utilization_percent": 81.25,
+            "memory_used_gb": 96.0,
+            "memory_capacity_gb": 96,
+            "memory_utilization_percent": 100.0
+          }
+        ]
+      },
+      "placed_delta": 3,
+      "rejected_delta": -3
+    }
+  ]
+}

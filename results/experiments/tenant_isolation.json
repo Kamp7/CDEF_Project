@@ -1,0 +1,9 @@
+{
+  "setup": "One task record is owned by a different simulated tenant.",
+  "expected": "The owner can read the record; a cross-tenant read is denied without returning contents.",
+  "owner_can_read_own_record": true,
+  "cross_tenant_access": "denied",
+  "denial_message": "Task record unavailable.",
+  "protected_contents_returned": false,
+  "result": "pass"
+}

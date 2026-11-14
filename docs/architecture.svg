@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="490" height="224" preserveAspectRatio="xMinYMin meet" viewBox="0 0 490 224" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="490" height="224"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-224)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="5" y="157" width="70" height="46" style="stroke: rgb(68%,75%,80%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="12" y="189" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,20%,30%); stroke:none;" transform="translate(0,378) scale(1,-1)">User / CLI</text>
+			<text x="12" y="164" style="font-family: Helvetica; font-size: 6.8px;fill: rgb(14%,21%,26%); stroke:none;" transform="translate(0,328) scale(1,-1)">choose policy</text>
+			<rect x="86" y="157" width="96" height="46" style="stroke: rgb(68%,75%,80%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="93" y="189" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,20%,30%); stroke:none;" transform="translate(0,378) scale(1,-1)">Seeded workload</text>
+			<text x="93" y="164" style="font-family: Helvetica; font-size: 6.8px;fill: rgb(14%,21%,26%); stroke:none;" transform="translate(0,328) scale(1,-1)">CPU / RAM / sensitivity</text>
+			<rect x="193" y="157" width="102" height="46" style="stroke: rgb(68%,75%,80%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(86%,91%,95%); fill-rule: evenodd;"/>
+			<text x="200" y="189" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,20%,30%); stroke:none;" transform="translate(0,378) scale(1,-1)">Placement engine</text>
+			<text x="200" y="164" style="font-family: Helvetica; font-size: 6.8px;fill: rgb(14%,21%,26%); stroke:none;" transform="translate(0,328) scale(1,-1)">two deterministic rules</text>
+			<rect x="314" y="91" width="170" height="116" style="stroke: rgb(68%,75%,80%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="321" y="193" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,20%,30%); stroke:none;" transform="translate(0,386) scale(1,-1)">Simulated compute nodes</text>
+			<text x="321" y="98" style="font-family: Helvetica; font-size: 6.8px;fill: rgb(14%,21%,26%); stroke:none;" transform="translate(0,196) scale(1,-1)">capacity and latency</text>
+			<rect x="324" y="168" width="150" height="29" style="stroke: rgb(68%,75%,80%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(86%,91%,95%); fill-rule: evenodd;"/>
+			<text x="331" y="183" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,20%,30%); stroke:none;" transform="translate(0,366) scale(1,-1)">Edge</text>
+			<text x="331" y="175" style="font-family: Helvetica; font-size: 6.8px;fill: rgb(14%,21%,26%); stroke:none;" transform="translate(0,350) scale(1,-1)">8 CPU | 8 GB | 5 ms</text>
+			<rect x="324" y="132" width="150" height="29" style="stroke: rgb(68%,75%,80%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(88%,94%,92%); fill-rule: evenodd;"/>
+			<text x="331" y="147" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,20%,30%); stroke:none;" transform="translate(0,294) scale(1,-1)">Fog</text>
+			<text x="331" y="139" style="font-family: Helvetica; font-size: 6.8px;fill: rgb(14%,21%,26%); stroke:none;" transform="translate(0,278) scale(1,-1)">16 CPU | 24 GB | 20 ms</text>
+			<rect x="324" y="96" width="150" height="29" style="stroke: rgb(68%,75%,80%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(97%,93%,86%); fill-rule: evenodd;"/>
+			<text x="331" y="111" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,20%,30%); stroke:none;" transform="translate(0,222) scale(1,-1)">Cloud</text>
+			<text x="331" y="103" style="font-family: Helvetica; font-size: 6.8px;fill: rgb(14%,21%,26%); stroke:none;" transform="translate(0,206) scale(1,-1)">64 CPU | 64 GB | 50 ms</text>
+			<rect x="15" y="7" width="110" height="30" style="stroke: rgb(68%,75%,80%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(97%,93%,86%); fill-rule: evenodd;"/>
+			<text x="22" y="23" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,20%,30%); stroke:none;" transform="translate(0,46) scale(1,-1)">VM manager</text>
+			<text x="22" y="14" style="font-family: Helvetica; font-size: 6.8px;fill: rgb(14%,21%,26%); stroke:none;" transform="translate(0,28) scale(1,-1)">create reserves; stop releases</text>
+			<rect x="160" y="32" width="150" height="40" style="stroke: rgb(68%,75%,80%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(95%,90%,92%); fill-rule: evenodd;"/>
+			<text x="167" y="58" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,20%,30%); stroke:none;" transform="translate(0,116) scale(1,-1)">Tenant scoped records</text>
+			<text x="167" y="39" style="font-family: Helvetica; font-size: 6.8px;fill: rgb(14%,21%,26%); stroke:none;" transform="translate(0,78) scale(1,-1)">owners read their task records</text>
+			<rect x="350" y="32" width="130" height="40" style="stroke: rgb(68%,75%,80%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(89%,94%,90%); fill-rule: evenodd;"/>
+			<text x="357" y="58" style="font-family: Helvetica-Bold; font-size: 8.2px;fill: rgb(9%,20%,30%); stroke:none;" transform="translate(0,116) scale(1,-1)">Results</text>
+			<text x="357" y="39" style="font-family: Helvetica; font-size: 6.8px;fill: rgb(14%,21%,26%); stroke:none;" transform="translate(0,78) scale(1,-1)">CSV | JSON | QoS chart</text>
+			<path d="M 75,180 L 86,180 Z" style="stroke: rgb(22%,47%,65%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<polygon points="86 180, 80.5 177.3, 80.5 182.7" style="stroke: rgb(22%,47%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,47%,65%); fill-rule: evenodd;"/>
+			<path d="M 182,180 L 193,180 Z" style="stroke: rgb(22%,47%,65%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<polygon points="193 180, 187.5 177.3, 187.5 182.7" style="stroke: rgb(22%,47%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,47%,65%); fill-rule: evenodd;"/>
+			<path d="M 295,180 L 309,180 Z" style="stroke: rgb(22%,47%,65%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<path d="M 309,180 L 309,110 Z" style="stroke: rgb(22%,47%,65%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<path d="M 309,182 L 324,182 Z" style="stroke: rgb(22%,47%,65%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<polygon points="324 182, 318.5 179.3, 318.5 184.7" style="stroke: rgb(22%,47%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,47%,65%); fill-rule: evenodd;"/>
+			<path d="M 309,146 L 324,146 Z" style="stroke: rgb(22%,47%,65%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<polygon points="324 146, 318.5 143.3, 318.5 148.7" style="stroke: rgb(22%,47%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,47%,65%); fill-rule: evenodd;"/>
+			<path d="M 309,110 L 324,110 Z" style="stroke: rgb(22%,47%,65%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<polygon points="324 110, 318.5 107.3, 318.5 112.7" style="stroke: rgb(22%,47%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(22%,47%,65%); fill-rule: evenodd;"/>
+			<path d="M 125,22 L 300,22 Z" style="stroke: rgb(82%,58%,27%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<polygon points="300 22, 294.5 19.3, 294.5 24.7" style="stroke: rgb(82%,58%,27%); stroke-linecap: butt; stroke-width: 1; fill: rgb(82%,58%,27%); fill-rule: evenodd;"/>
+			<path d="M 300,22 L 300,96 Z" style="stroke: rgb(82%,58%,27%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<path d="M 300,96 L 324,110 Z" style="stroke: rgb(82%,58%,27%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<polygon points="324 110, 320.6097 104.8965, 317.8888 109.5609" style="stroke: rgb(82%,58%,27%); stroke-linecap: butt; stroke-width: 1; fill: rgb(82%,58%,27%); fill-rule: evenodd;"/>
+			<path d="M 399,96 L 399,82 Z" style="stroke: rgb(17%,54%,52%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<path d="M 399,82 L 310,52 Z" style="stroke: rgb(17%,54%,52%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<polygon points="310 52, 314.3494 56.31537, 316.0743 51.19826" style="stroke: rgb(17%,54%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(17%,54%,52%); fill-rule: evenodd;"/>
+			<path d="M 310,52 L 350,52 Z" style="stroke: rgb(30%,58%,42%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<polygon points="350 52, 344.5 49.3, 344.5 54.7" style="stroke: rgb(30%,58%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(30%,58%,42%); fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

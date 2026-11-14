@@ -1,0 +1,14 @@
+flowchart LR
+    U[User / CLI] --> W[Seeded task workload]
+    W --> P[Placement engine]
+    P -->|Lowest latency first| E[Edge node]
+    P -->|Eligible capacity| F[Fog node]
+    P -->|Capacity aware| C[Cloud node]
+    V[Simulated VM manager] <--> N[Node CPU and RAM reservations]
+    E --> N
+    F --> N
+    C --> N
+    N --> R[Tenant scoped task records]
+    R --> A[Owner tenant check]
+    A --> O[Placements, simulated QoS, utilization]
+    O --> X[CSV, JSON and chart]

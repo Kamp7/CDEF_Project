@@ -1,0 +1,117 @@
+{
+  "simulation_label": "All latency and utilization figures are simulated.",
+  "random_seed": null,
+  "task_count": 12,
+  "resource_model": "Accepted tasks reserve CPU/RAM through the end of a run; policy runs start with fresh nodes.",
+  "latency_model": "Configured base latency plus 20 ms times projected bottleneck utilization.",
+  "runs": [
+    {
+      "policy": "lowest-latency-first",
+      "total_tasks": 12,
+      "placed_count": 11,
+      "rejected_count": 1,
+      "qos_met_count": 6,
+      "qos_missed_count": 5,
+      "mean_simulated_latency_ms": 53.18181818181818,
+      "placements_by_node": {
+        "edge-1": 1,
+        "fog-1": 2,
+        "cloud-1": 8
+      },
+      "qos_targets_ms_assumption": {
+        "high": 25.0,
+        "medium": 60.0,
+        "low": 100.0
+      },
+      "nodes": [
+        {
+          "node_id": "edge-1",
+          "node_type": "Edge",
+          "base_latency_ms": 5,
+          "cpu_used": 8.0,
+          "cpu_capacity": 8,
+          "cpu_utilization_percent": 100.0,
+          "memory_used_gb": 8.0,
+          "memory_capacity_gb": 8,
+          "memory_utilization_percent": 100.0
+        },
+        {
+          "node_id": "fog-1",
+          "node_type": "Fog",
+          "base_latency_ms": 20,
+          "cpu_used": 16.0,
+          "cpu_capacity": 16,
+          "cpu_utilization_percent": 100.0,
+          "memory_used_gb": 16.0,
+          "memory_capacity_gb": 24,
+          "memory_utilization_percent": 66.66666666666666
+        },
+        {
+          "node_id": "cloud-1",
+          "node_type": "Cloud",
+          "base_latency_ms": 50,
+          "cpu_used": 64.0,
+          "cpu_capacity": 64,
+          "cpu_utilization_percent": 100.0,
+          "memory_used_gb": 64.0,
+          "memory_capacity_gb": 64,
+          "memory_utilization_percent": 100.0
+        }
+      ]
+    },
+    {
+      "policy": "capacity-aware",
+      "total_tasks": 12,
+      "placed_count": 11,
+      "rejected_count": 1,
+      "qos_met_count": 7,
+      "qos_missed_count": 4,
+      "mean_simulated_latency_ms": 53.18181818181818,
+      "placements_by_node": {
+        "edge-1": 1,
+        "fog-1": 2,
+        "cloud-1": 8
+      },
+      "qos_targets_ms_assumption": {
+        "high": 25.0,
+        "medium": 60.0,
+        "low": 100.0
+      },
+      "nodes": [
+        {
+          "node_id": "edge-1",
+          "node_type": "Edge",
+          "base_latency_ms": 5,
+          "cpu_used": 8.0,
+          "cpu_capacity": 8,
+          "cpu_utilization_percent": 100.0,
+          "memory_used_gb": 8.0,
+          "memory_capacity_gb": 8,
+          "memory_utilization_percent": 100.0
+        },
+        {
+          "node_id": "fog-1",
+          "node_type": "Fog",
+          "base_latency_ms": 20,
+          "cpu_used": 16.0,
+          "cpu_capacity": 16,
+          "cpu_utilization_percent": 100.0,
+          "memory_used_gb": 16.0,
+          "memory_capacity_gb": 24,
+          "memory_utilization_percent": 66.66666666666666
+        },
+        {
+          "node_id": "cloud-1",
+          "node_type": "Cloud",
+          "base_latency_ms": 50,
+          "cpu_used": 64.0,
+          "cpu_capacity": 64,
+          "cpu_utilization_percent": 100.0,
+          "memory_used_gb": 64.0,
+          "memory_capacity_gb": 64,
+          "memory_utilization_percent": 100.0
+        }
+      ]
+    }
+  ]
+}
