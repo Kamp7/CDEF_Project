@@ -12,19 +12,33 @@ Python 3.10 or newer is recommended.
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-python main.py
+python -m streamlit run app.py
 ```
 
-The default run generates 20 tasks using seed `305`, then compares both
-placement policies on that same workload. Repeat it with the same seed to get
-the same task inputs and decisions:
+Open `http://127.0.0.1:8501` in your browser. The project Streamlit
+settings bind the app to `127.0.0.1`, so it is available only from this
+computer.
+
+The page accepts the task count, seed, placement policy, Edge/Fog/Cloud CPU and
+RAM capacities, and configured base latencies. After **Run simulation**, it
+streams each task's tenant ID, selected node, placement status, simulated
+latency, and QoS result to the table as the backend processes the workload.
+The live display pace is only for readability; it does not affect simulated
+latency. Completed UI runs are saved in a new folder under `results/ui_runs/`
+with a task CSV, summary JSON, and chart. The existing `python main.py` CLI
+continues to work.
+
+The UI defaults to 20 tasks and seed `305`. Select either policy or compare both
+on that same generated workload. For an optional command-line run, repeat the
+same count and seed to get the same task inputs and decisions:
 
 ```powershell
 python main.py --tasks 20 --seed 305
 ```
 
-The task count must be at least 10. A different seed or count can be selected;
-the selected values are printed and the seed is included in the run output.
+Both interfaces require at least 10 tasks. In command-line mode, a different
+seed or count can be selected; those values are printed and the seed is
+included in the saved run output.
 
 ## Policies and simulated assumptions
 
@@ -84,6 +98,7 @@ same-workload comparison after increasing Cloud RAM from 64 GB to 96 GB.
 - [Architecture diagram source](docs/architecture.mmd) and [standalone SVG](docs/architecture.svg).
 - [Verified 7-page project report](output/pdf/arm305_mini_project_report.pdf).
 - [6-slide presentation](output/presentation/arm305_mini_project_slides_submission.pptx).
+- [7-slide English project explainer](output/presentation/arm305_project_explainer_english_final_v3.pptx).
 
 Rebuild the report and architecture SVG after regenerating the experiments with:
 

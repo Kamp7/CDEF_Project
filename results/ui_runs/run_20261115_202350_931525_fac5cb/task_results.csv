@@ -1,0 +1,37 @@
+policy,task_id,tenant_id,cpu_required,memory_required_gb,latency_sensitivity,node_id,placement_status,simulated_latency_ms,qos_target_ms,qos_result,projected_cpu_utilization_percent,projected_memory_utilization_percent,rejection_reason
+lowest-latency-first,task-001,tenant-a,6,6,low,edge-1,placed,20.0,100.0,met,75.0,75.0,
+lowest-latency-first,task-002,tenant-b,1,8,high,fog-1,placed,26.666666666666664,25.0,missed,6.25,33.33333333333333,
+lowest-latency-first,task-003,tenant-a,6,9,high,fog-1,placed,34.16666666666667,25.0,missed,43.75,70.83333333333334,
+lowest-latency-first,task-004,tenant-b,7,10,medium,cloud-1,placed,53.125,60.0,met,10.9375,15.625,
+lowest-latency-first,task-005,tenant-a,3,3,medium,fog-1,placed,36.66666666666667,60.0,met,62.5,83.33333333333334,
+lowest-latency-first,task-006,tenant-b,2,7,medium,cloud-1,placed,55.3125,60.0,met,14.0625,26.5625,
+lowest-latency-first,task-007,tenant-a,6,6,low,cloud-1,placed,57.1875,100.0,met,23.4375,35.9375,
+lowest-latency-first,task-008,tenant-b,3,11,high,cloud-1,placed,60.625,25.0,missed,28.125,53.125,
+lowest-latency-first,task-009,tenant-a,4,2,high,fog-1,placed,38.33333333333333,25.0,missed,87.5,91.66666666666666,
+lowest-latency-first,task-010,tenant-b,1,12,high,cloud-1,placed,64.375,25.0,missed,29.6875,71.875,
+lowest-latency-first,task-011,tenant-a,2,5,low,cloud-1,placed,65.9375,100.0,met,32.8125,79.6875,
+lowest-latency-first,task-012,tenant-b,5,11,medium,cloud-1,placed,69.375,60.0,missed,40.625,96.875,
+lowest-latency-first,task-013,tenant-a,2,9,high,,rejected,,25.0,not-evaluated,,,No node has enough remaining CPU and memory.
+lowest-latency-first,task-014,tenant-b,5,10,high,,rejected,,25.0,not-evaluated,,,No node has enough remaining CPU and memory.
+lowest-latency-first,task-015,tenant-a,6,1,low,cloud-1,placed,69.6875,100.0,met,50.0,98.4375,
+lowest-latency-first,task-016,tenant-b,2,2,low,edge-1,placed,25.0,100.0,met,100.0,100.0,
+lowest-latency-first,task-017,tenant-a,4,7,low,,rejected,,100.0,not-evaluated,,,No node has enough remaining CPU and memory.
+lowest-latency-first,task-018,tenant-b,5,1,medium,cloud-1,placed,70.0,60.0,missed,57.8125,100.0,
+capacity-aware,task-001,tenant-a,6,6,low,cloud-1,placed,51.875,100.0,met,9.375,9.375,
+capacity-aware,task-002,tenant-b,1,8,high,cloud-1,placed,54.375,25.0,missed,10.9375,21.875,
+capacity-aware,task-003,tenant-a,6,9,high,cloud-1,placed,57.1875,25.0,missed,20.3125,35.9375,
+capacity-aware,task-004,tenant-b,7,10,medium,fog-1,placed,28.75,60.0,met,43.75,41.66666666666667,
+capacity-aware,task-005,tenant-a,3,3,medium,edge-1,placed,12.5,60.0,met,37.5,37.5,
+capacity-aware,task-006,tenant-b,2,7,medium,cloud-1,placed,59.375,60.0,met,23.4375,46.875,
+capacity-aware,task-007,tenant-a,6,6,low,cloud-1,placed,61.25,100.0,met,32.8125,56.25,
+capacity-aware,task-008,tenant-b,3,11,high,cloud-1,placed,64.6875,25.0,missed,37.5,73.4375,
+capacity-aware,task-009,tenant-a,4,2,high,fog-1,placed,33.75,25.0,missed,68.75,50.0,
+capacity-aware,task-010,tenant-b,1,12,high,cloud-1,placed,68.4375,25.0,missed,39.0625,92.1875,
+capacity-aware,task-011,tenant-a,2,5,low,fog-1,placed,36.25,100.0,met,81.25,70.83333333333334,
+capacity-aware,task-012,tenant-b,5,11,medium,,rejected,,60.0,not-evaluated,,,No node has enough remaining CPU and memory.
+capacity-aware,task-013,tenant-a,2,9,high,,rejected,,25.0,not-evaluated,,,No node has enough remaining CPU and memory.
+capacity-aware,task-014,tenant-b,5,10,high,,rejected,,25.0,not-evaluated,,,No node has enough remaining CPU and memory.
+capacity-aware,task-015,tenant-a,6,1,low,cloud-1,placed,68.75,100.0,met,48.4375,93.75,
+capacity-aware,task-016,tenant-b,2,2,low,edge-1,placed,17.5,100.0,met,62.5,62.5,
+capacity-aware,task-017,tenant-a,4,7,low,,rejected,,100.0,not-evaluated,,,No node has enough remaining CPU and memory.
+capacity-aware,task-018,tenant-b,5,1,medium,cloud-1,placed,69.0625,60.0,missed,56.25,95.3125,

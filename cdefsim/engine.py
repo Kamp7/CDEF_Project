@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Iterable, Mapping
+from collections.abc import Callable, Iterable, Mapping
 from dataclasses import dataclass
 import math
 from types import MappingProxyType
@@ -98,8 +98,9 @@ def run_policy(
     policy: PlacementPolicy | str,
     nodes: Iterable[Node] | None = None,
     qos_targets_ms: Mapping[LatencySensitivity | str, float] | None = None,
+    on_task_complete: Callable[[TaskOutcome], None] | None = None,
 ) -> SimulationRun:
-    """Run one policy, reserving accepted tasks through the end of the run."""
+    """Run one policy and optionally notify an observer after each task."""
     try:
         selected_policy = PlacementPolicy(policy)
     except ValueError as exc:
@@ -125,7 +126,10 @@ def run_policy(
             if result.status is PlacementStatus.PLACED
             else None
         )
-        outcomes.append(TaskOutcome(result, target, qos_met))
+        outcome = TaskOutcome(result, target, qos_met)
+        outcomes.append(outcome)
+        if on_task_complete is not None:
+            on_task_complete(outcome)
 
     node_usage = tuple(
         NodeUsage(
@@ -178,10 +182,16 @@ def run_policy(
 def run_policy_comparison(
     tasks: Iterable[Task],
     qos_targets_ms: Mapping[LatencySensitivity | str, float] | None = None,
+    on_task_complete: Callable[[TaskOutcome], None] | None = None,
 ) -> tuple[SimulationRun, ...]:
     """Run both policies on the same tasks with fresh, identical nodes."""
     workload = tuple(tasks)
     return tuple(
-        run_policy(workload, policy, qos_targets_ms=qos_targets_ms)
+        run_policy(
+            workload,
+            policy,
+            qos_targets_ms=qos_targets_ms,
+            on_task_complete=on_task_complete,
+        )
         for policy in PlacementPolicy
     )
